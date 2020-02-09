@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>LOGIN | CADASTRO</title>
+    </head>
+    <body>
+        <div class="container">
+             <div class="row justify-content-center jumbotron mt-5 border border-dark">
+                <input class="w-75 rounded-pill text-center" readonly type="text" value="{mensagem}">
+                 <hr width="100%"/>
+                 <div class="mt-1 col-lg-6 mt-4">
+                     <h2 class="text-center">Cadastro</h2>
+                    <form action="processa_classe.php?class=Processa" method="POST">
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label class="font-weight-bold">Nome</label>
+                            <input type="text" class="form-control" name="nome" value="" placeholder="Digite seu nome">
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label class="font-weight-bold">E-mail</label>
+                            <input type="text" class="form-control" name="email" value="" placeholder="exemplo@exemplo.com">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold">CPF</label>
+                            <input type="text" class="form-control" name="cpf" value="" placeholder="Digite seu CPF">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Senha</label>
+                                <input type="password" class="form-control" name="senha" value="" placeholder="Digite sua senha">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">Confirme a sua senha</label>
+                                <input type="password" class="form-control" name="confirmaSenha" value="" placeholder="Digite sua senha">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <!-- CODIGO  DO FORMULARIO-->
+                                <input type="hidden" class="form-control" name="codigo" value="0">
+                            </div>
+                       </div>
+                        <button class="btn btn-success" name="enviar" type="submit">Enviar</button>
+                      </form>
+                    
+                 </div>
+                 <div class="mt-1 col-lg-6 mt-4 mb-4">
+                
+                    <h2 class="text-center">Login</h2>
+                    <form action="processa_classe.php?class=Processa" method="POST">
+                          <div class="mb-3">
+                            <label class="font-weight-bold">Login</label>
+                            <input type="text" class="form-control" name="login" placeholder="Digite CPF ou E-MAIL" value="">
+                          </div>
+                          <div class="mb-3">
+                            <label class="font-weight-bold">Senha</label>
+                            <input type="password" class="form-control" name="senha" placeholder="Digite a senha" value="">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <!-- CODIGO  DO FORMULARIO-->
+                            <input type="hidden" class="form-control" name="codigo" value="1">
+                        </div>
+                       
+                        <button class="btn btn-success" name="enviar" type="submit">Enviar</button>
+                      </form>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <img id="img" class="w-25" src="css/cadeado.png" alt="">
+                </div>
+             </div>
+        </div>
+        <script src="animacao.js"></script>
+    </body>
+</html>
